@@ -1,0 +1,23 @@
+SELECT *
+FROM Customers
+WHERE Country = 'Brazil';
+
+SELECT c.CustomerName, o.OrderID
+FROM Customers c
+JOIN Orders o ON c.CustomerID = o.CustomerID
+WHERE c.Country = 'USA';
+
+SELECT ProductName, Price
+FROM Products
+WHERE Price > 20
+ORDER BY Price DESC;
+
+INSERT INTO Customers (CustomerName, ContactName, Country)
+VALUES ('Cardinal', 'Tom B. Erich', 'Norway');
+
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt'
+WHERE CustomerID = 1;
+
+DELETE FROM Customers
+WHERE CustomerName = 'Cardinal';
